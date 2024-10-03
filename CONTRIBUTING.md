@@ -1,7 +1,5 @@
 ## <a name="commit"></a> Commit Message Format
 
-*This specification is inspired by and supersedes the [AngularJS commit message format][commit-message-format].*
-
 We have very precise rules over how our Git commit messages must be formatted.
 This format leads to **easier to read commit history**.
 
@@ -31,11 +29,11 @@ The `footer` is optional. The [Commit Message Footer](#commit-footer) format des
   │       │             │
   │       │             └─⫸ Summary in present tense. Not capitalized. No period at the end.
   │       │
-  │       └─⫸ Commit Scope: animations|bazel|benchpress|common|compiler|compiler-cli|core|
-  │                          elements|forms|http|language-service|localize|platform-browser|
-  │                          platform-browser-dynamic|platform-server|router|service-worker|
-  │                          upgrade|zone.js|packaging|changelog|docs-infra|migrations|
-  │                          devtools
+  │       └─⫸ Commit Scope: codershub|gateway|authentication|user|problem|admin|compiler|
+  │                          submission|discussion|search|payment|analytics
+  │                          
+  │                          
+  │                          
   │
   └─⫸ Commit Type: build|ci|docs|feat|fix|perf|refactor|test
 ```
@@ -58,46 +56,23 @@ Must be one of the following:
 
 
 ##### Scope
-The scope should be the name of the npm package affected (as perceived by the person reading the changelog generated from commit messages).
+
+The scope should be the name of the service affected.
 
 The following is the list of supported scopes:
 
-* `animations`
-* `bazel`
-* `benchpress`
-* `common`
+* `codershub`
+* `gateway`
+* `authentication`
+* `user`
+* `problem`
+* `admin`
 * `compiler`
-* `compiler-cli`
-* `core`
-* `elements`
-* `forms`
-* `http`
-* `language-service`
-* `localize`
-* `platform-browser`
-* `platform-browser-dynamic`
-* `platform-server`
-* `router`
-* `service-worker`
-* `upgrade`
-* `zone.js`
-
-There are currently a few exceptions to the "use package name" rule:
-
-* `packaging`: used for changes that change the npm package layout in all of our packages, e.g. public path changes, package.json changes done to all packages, d.ts file/format changes, changes to bundles, etc.
-
-* `changelog`: used for updating the release notes in CHANGELOG.md
-
-* `dev-infra`: used for dev-infra related changes within the directories /scripts and /tools
-
-* `docs-infra`: used for docs-app (angular.dev) related changes within the /adev directory of the repo
-
-* `migrations`: used for changes to the `ng update` migrations.
-
-* `devtools`: used for changes in the [browser extension](./devtools/README.md).
-
-* none/empty string: useful for `test` and `refactor` changes that are done across all packages (e.g. `test: add missing unit tests`) and for docs changes that are not related to a specific package (e.g. `docs: fix typo in tutorial`).
-
+* `submission`
+* `discussion`
+* `search`
+* `payment`
+* `analytics`
 
 ##### Summary
 
@@ -144,5 +119,3 @@ Closes #<pr number>
 Breaking Change section should start with the phrase `BREAKING CHANGE: ` followed by a summary of the breaking change, a blank line, and a detailed description of the breaking change that also includes migration instructions.
 
 Similarly, a Deprecation section should start with `DEPRECATED: ` followed by a short description of what is deprecated, a blank line, and a detailed description of the deprecation that also mentions the recommended update path.
-
-
