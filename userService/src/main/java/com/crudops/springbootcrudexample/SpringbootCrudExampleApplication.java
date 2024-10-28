@@ -2,13 +2,25 @@ package com.crudops.springbootcrudexample;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import io.github.cdimascio.dotenv.Dotenv;
 
 @SpringBootApplication
 public class SpringbootCrudExampleApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringbootCrudExampleApplication.class, args);
-		System.out.printf("Hello world");
-	}
-
+    public static void main(String[] args) {
+        
+        Dotenv dotenv = Dotenv.load();
+        
+        
+        System.setProperty("SERVER_PORT", dotenv.get("SERVER_PORT"));
+        System.setProperty("MYSQL_URL", dotenv.get("MYSQL_URL"));
+        System.setProperty("MYSQL_USERNAME", dotenv.get("MYSQL_USERNAME"));
+		System.setProperty("MYSQL_PASSWORD", dotenv.get("MYSQL_PASSWORD"));
+		    
+       
+        SpringApplication.run(SpringbootCrudExampleApplication.class, args);
+        
+       
+		System.out.printf("Hello world%n");
+    }
 }
