@@ -8,11 +8,11 @@
 		<version>3.2.2</version>
 		<relativePath/> 
 	</parent>
-	<groupId>com.crudops</groupId>
+	<groupId>com.userServiceCrudOps</groupId>
 	<artifactId>springboot-crud-example</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>springboot-crud-example</name>
-	<description>Demo project for Spring Boot</description>
+	<description>This service is responsible for handling queries related userservice</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

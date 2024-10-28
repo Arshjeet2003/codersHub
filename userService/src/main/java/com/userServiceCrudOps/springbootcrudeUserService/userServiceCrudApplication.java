@@ -1,11 +1,11 @@
-package com.crudops.springbootcrudexample;
+package com.userServiceCrudOps.springbootcrudeUserService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import io.github.cdimascio.dotenv.Dotenv;
 
 @SpringBootApplication
-public class SpringbootCrudExampleApplication {
+public class userServiceCrudApplication {
 
     public static void main(String[] args) {
         
@@ -18,7 +18,7 @@ public class SpringbootCrudExampleApplication {
 		System.setProperty("MYSQL_PASSWORD", dotenv.get("MYSQL_PASSWORD"));
 		    
        
-        SpringApplication.run(SpringbootCrudExampleApplication.class, args);
+        SpringApplication.run(userServiceCrudApplication.class, args);
         
        
 		System.out.printf("Hello world%n");
