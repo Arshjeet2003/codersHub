@@ -1,10 +1,10 @@
-package com.crudops.springbootcrudexample;
+package com.userServiceCrudOps.springbootcrudeUserService;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringbootCrudExampleApplicationTests {
+class userServiceCrudApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,4 +1,4 @@
-package com.crudops.springbootcrudexample.entity;
+package com.userServiceCrudOps.springbootcrudeUserService.entity;
 
 import jakarta.persistence.*;
 
