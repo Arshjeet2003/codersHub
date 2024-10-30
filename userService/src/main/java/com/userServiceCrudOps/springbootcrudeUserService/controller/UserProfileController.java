@@ -39,6 +39,10 @@ public class UserProfileController {
         return service.updateUserProfile(userProfile);
     }
 
+    @DeleteMapping("/deleteUserProfile/{id}")
+    public String deleteUserProfile(@PathVariable int id) {
+        return service.deleteUserProfile(id);
+    }
 
    
 }
