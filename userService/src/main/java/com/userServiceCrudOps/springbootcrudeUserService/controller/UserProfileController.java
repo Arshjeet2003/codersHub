@@ -27,5 +27,11 @@ public class UserProfileController {
         return service.getUserProfiles();
     }
 
+     @GetMapping("/getUserProfileByUsername/{username}")
+    public UserProfile findUserProfileByUsername(@PathVariable String username) {
+        return service.getUserProfileByUsername(username);
+    }
+
+
 
 }
