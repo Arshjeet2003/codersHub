@@ -18,4 +18,9 @@ public class UserProfileController {
     public UserProfile addUserProfile(@RequestBody UserProfile userProfile) {
         return service.saveUserProfile(userProfile);
     }
+     @PostMapping("/addUserProfiles")
+    public List<UserProfile> addUserProfiles(@RequestBody List<UserProfile> userProfiles) {
+        return service.saveUserProfiles(userProfiles);
+    }
+
 }
