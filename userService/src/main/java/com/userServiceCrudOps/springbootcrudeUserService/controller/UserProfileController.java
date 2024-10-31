@@ -28,9 +28,15 @@ public class UserProfileController {
     }
 
      @GetMapping("/getUserProfileByUsername/{username}")
-    public UserProfile findUserProfileByUsername(@PathVariable String username) {
-        return service.getUserProfileByUsername(username);
+     public UserProfile findUserProfileByUsername(@PathVariable String username) {
+         return service.getUserProfileByUsername(username);
+     }
+    
+     @PutMapping("/updateUserProfile")
+    public UserProfile updateUserProfile(@RequestBody UserProfile userProfile) {
+        return service.updateUserProfile(userProfile);
     }
+
 
 
 
