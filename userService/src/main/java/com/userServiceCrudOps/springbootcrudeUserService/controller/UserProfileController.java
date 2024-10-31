@@ -33,9 +33,15 @@ public class UserProfileController {
      }
     
      @PutMapping("/updateUserProfile")
-    public UserProfile updateUserProfile(@RequestBody UserProfile userProfile) {
-        return service.updateUserProfile(userProfile);
+     public UserProfile updateUserProfile(@RequestBody UserProfile userProfile) {
+         return service.updateUserProfile(userProfile);
+     }
+    
+      @DeleteMapping("/deleteUserProfile/{id}")
+    public String deleteUserProfile(@PathVariable int id) {
+        return service.deleteUserProfile(id);
     }
+
 
 
 
